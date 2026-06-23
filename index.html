@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation Header -->
+        <nav>
+            <h1>Weather App</h1>
+        </nav>
+
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Search city..." />
+
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <!-- Loading & Error Messages -->
+        <p id="loadingMessage" class="loading-message" aria-live="polite"></p>
+        <p id="errorMessage" class="error-message" aria-live="assertive" role="alert"></p>
+
+        <!-- Hero Section - Current Weather -->
+        <section class="hero">
+            <div id="weatherIcon" class="weather-icon">☀️</div>
+            <h2 id="cityName">City</h2>
+            <h1 id="temperature">--°C</h1>
+            <p id="description">Weather Description</p>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Humidity</h3>
+                <p id="humidity">--%</p>
+            </div>
+            <div class="stat-card">
+                <h3>Wind Speed</h3>
+                <p id="windSpeed">-- km/h</p>
+            </div>
+            <div class="stat-card">
+                <h3>UV Index</h3>
+                <p id="uvIndex">--</p>
+            </div>
+        </section>
+
+        <!-- Forecast Section -->
+        <section class="forecast-section">
+            <h3 class="forecastHeader">5-DAY FORECAST</h3>
+            <div class="forecastOverallContainer" id="forecastContainer"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

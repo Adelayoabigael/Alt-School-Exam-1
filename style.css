@@ -1,0 +1,241 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+}
+
+/* Header */
+nav {
+    background: #1a3c5e;
+    color: white;
+    padding: 18px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+/* Search Section */
+.search-section {
+    padding: 15px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #2e86ab;
+}
+
+.search-box button {
+    padding: 10px 18px;
+    border: none;
+    background: #2e86ab;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.search-box button:hover {
+    background: #256b89;
+    transform: scale(1.03);
+}
+
+/* Loading Message */
+.loading-message {
+    display: none;
+    text-align: center;
+    color: #2e86ab;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Error Message */
+.error-message {
+    display: none;
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: #2e86ab;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.stat-card h3 {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.stat-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1a3c5e;
+}
+
+/* Forecast Section */
+.forecast-section {
+    padding: 15px;
+}
+
+.forecastHeader {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.forecastOverallContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forecast-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px;
+    background: #ecf5f7;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.forecast-card:hover {
+    background: #e2eef3;
+    transform: translateY(-2px);
+}
+
+.day-name {
+    color: #1a3c5e;
+    font-weight: bold;
+}
+
+.forecast-icon {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.forecast-temperature {
+    justify-self: end;
+    text-align: right;
+}
+
+.forecast-temperature p:first-child {
+    font-weight: bold;
+    color: #1a3c5e;
+}
+
+.forecast-temperature p:last-child {
+    color: #777;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+}
+
+/* Mobile Requirement */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .forecast-card {
+        grid-template-columns: 90px 50px 1fr;
+        gap: 8px;
+    }
+
+    .forecast-icon {
+        font-size: 1.5rem;
+    }
+}
